@@ -4,7 +4,6 @@ from config import config
 
 
 class RedisClient:
-
     def __init__(self, ttl: int = 3600):
         self.redis = redis.Redis(
             host=config.redis_host, port=6379, decode_responses=True

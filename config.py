@@ -6,6 +6,8 @@ class Config(BaseSettings):
 
     redis_host: str = "localhost"
 
+    prefix: str = ""
+
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"

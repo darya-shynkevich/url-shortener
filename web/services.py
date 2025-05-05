@@ -3,7 +3,6 @@ import random
 
 
 class ShortenerService:
-
     ALLOWED_CHARS = string.ascii_letters + string.digits
 
     def __init__(self, internal_domain: str = "http://localhost:8000/"):
