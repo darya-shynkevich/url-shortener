@@ -1,0 +1,5 @@
+fastapi>=0.103.1
+pydantic>=2.4.0
+redis>=4.6.0
+uvicorn>=0.23.2
+pydantic-settings>=2.0.3
