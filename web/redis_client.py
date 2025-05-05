@@ -1,3 +1,5 @@
+from urllib.parse import urlparse
+
 import redis.asyncio as redis
 
 from config import config
@@ -5,9 +7,14 @@ from config import config
 
 class RedisClient:
     def __init__(self, ttl: int = 3600):
+        parsed_url = urlparse(config.redis_url)
         self.redis = redis.Redis(
-            host=config.redis_host, port=6379, decode_responses=True
+            host=parsed_url.hostname,
+            port=parsed_url.port,
+            password=parsed_url.password,
+            decode_responses=True,
         )
+
         self.ttl = ttl
 
     async def set(self, key: str, value: str):

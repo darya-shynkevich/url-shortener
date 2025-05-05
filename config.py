@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings
 class Config(BaseSettings):
     port: int = 8000
 
-    redis_host: str = "localhost"
+    redis_url: str = "redis://localhost:6379"
 
     prefix: str = ""
 
