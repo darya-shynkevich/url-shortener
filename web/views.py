@@ -2,7 +2,7 @@ from fastapi import HTTPException
 from starlette.responses import RedirectResponse
 
 from app import app, shortener_service, redis_client
-from serializers import URLShortenRequest, URLShortenResponse
+from web.serializers import URLShortenRequest, URLShortenResponse
 
 
 @app.post("/shorten")

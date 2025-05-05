@@ -41,7 +41,7 @@ A simple URL shortener service built with FastAPI, Redis, and Pydantic. This ser
 
 5. Run the FastAPI application:
    ```bash
-   uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+   uvicorn web.app:app --host 0.0.0.0 --port 8000 --reload
    ```
 
 Access the API documentation: Open your browser and navigate to:

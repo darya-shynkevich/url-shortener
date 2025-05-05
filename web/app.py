@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from redis_client import RedisClient
-from services import ShortenerService
+from web.redis_client import RedisClient
+from web.services import ShortenerService
 
 app = FastAPI()
 
